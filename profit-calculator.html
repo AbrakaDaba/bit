@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>BitProfit Calculator</title>
+</head>
+
+<body class="profit-calc">
+    <h1 class="profit-calc__title">Potential profits calculator</h1>
+    <p class="profit-calc__txt">Use our calculator to get your potential earnings from BitProfit.</p>
+    <div class="calc-box">
+        <div class="calc-payout">
+            <span class="logo-circle"></span>
+            <div class="payout-box">
+                <div class="payout-box__title">Potential payout</div>
+                <div class="payout-box__icon"><img src="./assets/payout-icon.svg" alt=""></div>
+            </div>
+            <div class="payout-box__amount">$3,365</div>
+            <button class="btn btn_green">Join us right now!</button>
+        </div>
+
+        <div class="calc-range">
+            <!-- Deposit -->
+            <div class="calc-range__deposit">
+                <div class="flexr-btw">
+                    <form onsubmit="inputDeposit();return false">
+                        <label for="currency" class="calc-range__title">Deposit</label>
+                        <span class="calc-range-input">
+                            <span class="currency">$</span>
+                            <input id="currency" name="currency" type="number" value="1250" min="0" max="5000"
+                                class="calc-range-input__deposit">
+                        </span>
+                    </form>
+                </div>
+                <div class="height-helper">
+                    <input onchange="sliderDeposit(this)" type="range" min="0" max="5000" value="1250" step="50"
+                        class="custom-range-slider calc-range__deposit__slider">
+                    <span class="current-value-box"><span class="current-value-box__num"></span></span>
+                    <span class="slider-values slider-min">$0</span>
+                    <span class="slider-values slider-max">$5,000</span>
+                </div>
+            </div>
+            <!-- Time of usage -->
+            <div class="calc-range__time">
+                <div class="flexr-btw">
+                    <form onsubmit="inputDays();return false">
+                        <label for="time-unit-days" class="calc-range__title">Time of usage</label>
+                        <span class="calc-range-input">
+                            <input id="time-unit-days" name="time-unit-days" type="number" value="90" min="0" max="180"
+                                class="calc-range-input__time">
+                            <span class="time-unit">days</span>
+                        </span>
+                    </form>
+                </div>
+                <div class="height-helper">
+                    <input onchange="sliderDays(this)" type="range" min="0" max="180" value="90" step="1"
+                        class="custom-range-slider calc-range__time__slider">
+                    <span class="current-value-box"><span class="current-value-box__num"></span></span>
+                    <span class="slider-values slider-min">0 days</span>
+                    <span class="slider-values slider-max">180 days</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./range-slider.js"></script>
+</body>
+
+</html>

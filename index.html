@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>BitProfit</title>
+    <script>
+        var mapInitialized = false;
+
+        function initMap() {
+            mapInitialized = true;
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly">
+    </script>
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <!-- SECTION: INTRO -->
+        <div class="intro section-bg">
+            <div class="intro-bg-circle"></div>
+            <div class="top-content">
+
+                <header>
+                    <!-- LOGO -->
+                    <a href="#" class="logo"><img src="./assets/logo.svg" alt=""></a>
+
+                    <!-- Warning -->
+                    <div class="warning">
+                        <span class="warning__txt">Warning: </span>
+                        <span class="warning__txt_light desktop-only">We are closing the registration soon due to
+                            extremely high demand.
+                            Hurry up!</span>
+                        <span class="mob-only">Just few hours remaining. Hurry up!</span>
+                        <span class="warning__txt warning__countdown">01:24:59</span>
+                        <span role="button" type="button" class="warning__close">&times;</span>
+                    </div>
+                    <div class="user-earned mob-only">
+                        <div class="user-bubble user-bubble_header">
+                            <div class="user-info">
+                                <img class="user-info__img" src="./assets/users/user2.jpg" alt="user-testimony">
+                                <p class="user-info__name">Billy Kane</p>
+                                <p class="user-info__data">just earned <span>$879</span></p>
+                            </div>
+                            <span class="user-active"></span>
+                        </div>
+                    </div>
+
+                    <!-- Exclusive offer -->
+                    <div class="excl-offer-user-earned">
+                        <div class="excl-offer">
+                            <div class="excl-offer__txt">
+                                <span>Exclusive offer for</span>
+                                <span class="excl-offer__txt_light">Traders in <span
+                                        class="visitor-country"></span></span>
+                            </div>
+                            <div class="visitor-flag"><img src="./assets/UK.png" alt="UK-flag-image"></div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="txt-video-form">
+                <div class="txt-video">
+                    <h2 class="main-title">Earn money with Bitcoin</h2>
+                    <div class="intro-txt">Easiest way to invest in shares of public companies</div>
+                    <!-- VIDEO -->
+                    <div class="video-box">
+                        <div class="video-wrapper">
+                            <video controls="" poster="./assets/video/video-poster.jpg">
+                                <source src="./assets/video/bitcoin1.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ************************************************************** -->
+                <!-- *********************      F O R M S      ******************** -->
+                <!-- ************************************************************** -->
+
+                <!-- IMPORTANT: Change class to 'form-choice2' for different layout -->
+                <div class="form-choice form-choice1">
+
+                    <!-- FORM 1  - One step -->
+                    <div class="form-box form-box_1 intro-form1">
+                        <h3 class="form-box__title">Start your journey<br> with us</h3>
+                        <form action="" class="form" autocomplete="off">
+
+                            <!-- ATENTION:  add class 'input-filled' for checked if an input is filled out -->
+
+                            <!-- First and Last name -->
+                            <div class="f-l-name">
+                                <div class="f-name">
+                                    <label for="f-name">First name</label>
+                                    <input placeholder="e.g. Peter" type="text" id="f-name" class="form__input"
+                                        required>
+                                </div>
+                                <div class="l-name">
+                                    <label for="l-name">Last name</label>
+                                    <input type="text" id="l-name" class="form__input" required>
+                                </div>
+                            </div>
+                            <!-- First and Last name - END -->
+
+                            <!-- E-mail -->
+                            <label for="e-mail">Email</label>
+                            <input type="email" id="e-mail" class="form__input" placeholder="e.g. evemcallis@gmail.com "
+                                required>
+                            <!-- E-mail - END -->
+
+                            <!-- Phone number SELECT(EXAMPLE ONLY)-->
+                            <div class="phone-box">
+                                <select name="phone-code" class="phone-code"></select>
+
+                                <label for="phone-num">Phone</label>
+                                <input type="number" id="phone-num" class="form__input" placeholder="XX-XX-XXX-XXX"
+                                    required>
+                            </div>
+                            <!-- Phone number - END -->
+                            <button type="button" class="btn btn_blue" id="formJoinTop">Join us right now!</button>
+                        </form>
+                    </div>
+
+
+                    <!-- FORM 2 - Two steps -->
+                    <!-- step 1 -->
+                    <div class="form-box form-box_2 intro-form2">
+                        <div class="form-box__step1">
+                            <div class="step-indicator txt-blue">STEP <span>1</span> / <span
+                                    class="transparent-05">2</span>
+                            </div>
+                            <h3 class="form-box__title">Start your journey<br> with us</h3>
+                            <form action="" class="form form_step1">
+                                <!-- add class 'input-filled' for checked if an input is filled out -->
+
+                                <!-- First and Last name -->
+                                <div class="f-l-name">
+                                    <div class="f-name">
+                                        <label for="f-name2">First name</label>
+                                        <input value="Peter" type="text" id="f-name2"
+                                            class="form__input form__input1 input-filled" required>
+                                    </div>
+                                    <div class="l-name">
+                                        <label for="l-name2">Last name</label>
+                                        <input type="text" id="l-name2" class="form__input form__input1" required>
+                                    </div>
+                                </div>
+                                <!-- First and Last name - END -->
+
+                                <label for="e-mail2">Email</label>
+                                <input type="email" id="e-mail2" class="form__input form__input1"
+                                    placeholder="e.g. evemcallis@gmail.com " required>
+
+                                <button type="button" class="btn btn_blue btn-next">Join us right now!</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- step 2 -->
+                    <div class="form-box form-box_2 form-box_2-2 intro-form2 form-switch">
+                        <div class="form-box__step2">
+                            <div class="step-indicator txt-blue">STEP <span>2</span> / <span
+                                    class="transparent-05">2</span>
+                            </div>
+                            <h3 class="form-box__title">One more step!</h3>
+                            <form action="" class="form form_step2" autocomplete="off">
+                                <!-- add class 'input-filled' for checked if an input is filled out -->
+
+                                <!-- Phone number SELECT(EXAMPLE ONLY)-->
+                                <div class="phone-box">
+                                    <select name="countryCode">
+                                    </select>
+
+                                    <label for="phone-num2">Phone</label><input type="number" id="phone-num2"
+                                        class="form__input" placeholder="XX-XX-XXX-XXX" required>
+                                </div>
+                                <!-- Phone number - END -->
+                                <button type="button" class="btn btn_blue btn-finish">Join us right now!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- SECTION: INTRO - END -->
+
+        <!-- SECTION: SAFE & SECURE -->
+        <div class="safe-secure section">
+            <div class="safe-secure-box"><img src="./assets/mdi_lock.svg" alt="lock-icon"><span
+                    class="safe-secure-box__title">SAFE & SECURE</span></div>
+            <ul class="safe-secure__logo-list">
+                <li>
+                    <picture>
+                        <source media="(min-width:320px)" srcset="./assets/logos/logo01.png">
+                        <img src="./assets/logos/logo1.png" alt="logo1">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width:320px)" srcset="./assets/logos/logo02.png">
+                        <img src="./assets/logos/logo02.png" alt="logo2">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width:320px)" srcset="./assets/logos/logo03.png">
+                        <img src="./assets/logos/logo03.png" alt="logo3">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width:320px)" srcset="./assets/logos/logo04.png">
+                        <img src="./assets/logos/logo04.png" alt="logo4">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width:320px)" srcset="./assets/logos/logo05.png">
+                        <img src="./assets/logos/logo05.png" alt="logo5">
+                    </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source media="(min-width:320px)" srcset="./assets/logos/logo06.png">
+                        <img src="./assets/logos/logo06.png" alt="logo6">
+                    </picture>
+                </li>
+
+            </ul>
+        </div>
+        <!-- SECTION: SAFE & SECURE - END -->
+
+    </div>
+
+
+    <!-- SECTION: HOW-TO-START -->
+    <div class="how-to-start section">
+        <div class="flex-wrapper">
+            <div class="flex-item">
+                <h3 class="section-title txt-dark">How to start?</h3>
+                <p class="section-txt">It’s never been easier to get rich. All you need to do is open account at
+                    BitProfit and
+                    lorem ipsum dolor sit amet.</p>
+                <button class="btn btn_blue position-to-form">Open free account</button>
+            </div>
+            <div class="testimony">
+                <p class="section-txt txt-italic">"I've been a member of the BitProfit for only 47 days. But my life has
+                    already changed! Not only have I made my first $10K, but I've also met some of the most incredible
+                    people in the process. Thanks, BitProfit!"</p>
+                <div class="user-info">
+                    <img class="user-info__img" src="./assets/user-testimony.jpg" alt="user-testimony">
+                    <p class="user-info__name">Harry Crouch</p>
+                    <p class="user-info__data">Manchester</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps">
+            <!-- step 1 -->
+            <div class="step step_1">
+                <div>
+                    <div class="mb-custom">
+                        <span>STEP 1</span><img src="./assets/step1ico.svg" alt="step-1-icon">
+                    </div>
+                    <h4 class="section-subtitle">Sign up on our site</h4>
+                    <p class="section-txt">Once your registration is accepted, you will automatically become the newest
+                        member of the BitProfit.</p>
+                </div>
+                <button class="btn btn_blue position-to-form">Start right now</button>
+                <div class="step__num">1</div>
+            </div>
+            <!-- step 2 -->
+            <div class="step step_2">
+                <div>
+                    <div class="mb-custom">
+                        <span>STEP 2</span><img src="./assets/step2ico.svg" alt="step-2-icon">
+                    </div>
+                    <h4 class="section-subtitle">Fund your account</h4>
+                    <p class="section-txt">To start profiting with the BitProfit, you must invest any amount you desire
+                        of
+                        $250 or more.</p>
+                </div>
+                <button class="btn btn_blue position-to-form">Start right now</button>
+                <div class="step__num">2</div>
+            </div>
+            <!-- step 3 -->
+            <div class="step step_3">
+                <div>
+                    <div class="mb-custom">
+                        <span>STEP 3</span><img src="./assets/step3ico.svg" alt="step-3-icon">
+                    </div>
+                    <h4 class="section-subtitle">Start earning money</h4>
+                    <p class="section-txt">Click trade to enjoy precise and accurate hands-free trading powered by our
+                        award-winning algorithm.</p>
+                </div>
+                <button class="btn btn_green position-to-form">Start right now</button>
+                <div class="step__num">3</div>
+            </div>
+        </div>
+        <!-- Steps - END -->
+
+    </div>
+    <!-- SECTION: HOW-TO-START - END -->
+
+
+    <!--  SECTION: MAP- background-img temporary-->
+    <div id="map" class="map section">
+    </div>
+    <!--  SECTION: MAP- background-img temporary - END -->
+
+
+    <!-- CTA - Call to action -box  -->
+    <div class="cta-box cta-box_dislocated">
+        <div>
+            <h4 class="section-subtitle txt-white">Start now. The time is running out! <span><span
+                        class="cta__countdown">01:24:59</span></span></h4>
+            <p class="section-txt">We are closing the registration soon due to extremely high demand. Hurry up! </p>
+        </div>
+        <button class="btn btn_green position-to-form">Join us right now!</button>
+    </div>
+    <!-- CTA - Call to action -box - END -->
+
+
+    <!-- SECTION: Live Profit Results -->
+    <div class="section live_section">
+        <h3 class="section-title">Live profit results</h3>
+        <div class="table-live">
+            <table>
+                <tr>
+                    <th class="first-name-th">Firstname</th>
+                    <th class="trade-time-th">Trade time</th>
+                    <th class="crypto-th"><span class="tablet-plus">Cryptocurrency</span><span
+                            class="mob-only">Cryptocur.</span></th>
+                    <th class="profit-th">Profit</th>
+                    <th class="results-th">Result</th>
+                </tr>
+                <tr>
+                    <td class="first-name-td">Barry Petterson</td>
+                    <td class="trade-time-td">24 Aug 2020</td>
+                    <td class="crypto-td">ETH/LTC</td>
+                    <td class="profit-td">$1,054</td>
+                    <td class="results-td"><span class="check-sign"></span></td>
+                </tr>
+                <tr>
+                    <td class="first-name-td">Andrew Jacobs</td>
+                    <td class="trade-time-td">24 Aug 2020</td>
+                    <td class="crypto-td">ETH/LTC</td>
+                    <td class="profit-td">$1,054</td>
+                    <td class="results-td"><span class="check-sign"></span></td>
+                </tr>
+                <tr>
+                    <td class="first-name-td">Lena Carlton</td>
+                    <td class="trade-time-td">24 Aug 2020</td>
+                    <td class="crypto-td">ETH/LTC</td>
+                    <td class="profit-td">$1,054</td>
+                    <td class="results-td"><span class="check-sign"></span></td>
+                </tr>
+                <tr>
+                    <td class="first-name-td">Daisy Chambers</td>
+                    <td class="trade-time-td">24 Aug 2020</td>
+                    <td class="crypto-td">ETH/LTC</td>
+                    <td class="profit-td">$1,054</td>
+                    <td class="results-td"><span class="check-sign"></span></td>
+                </tr>
+                <tr>
+                    <td class="first-name-td">Harry Windsor</td>
+                    <td class="trade-time-td">24 Aug 2020</td>
+                    <td class="crypto-td">ETH/LTC</td>
+                    <td class="profit-td">$1,054</td>
+                    <td class="results-td"><span class="check-sign"></span></td>
+                </tr>
+                <tr>
+                    <td class="first-name-td">Pete Warner</td>
+                    <td class="trade-time-td">24 Aug 2020</td>
+                    <td class="crypto-td">ETH/LTC</td>
+                    <td class="profit-td">$1,054</td>
+                    <td class="results-td"><span class="check-sign"></span></td>
+                </tr>
+            </table>
+            <button class="btn btn_blue position-to-form">Join us right now!</button>
+        </div>
+    </div>
+    <!-- SECTION: Live Profit Results - END -->
+
+
+    <!-- SECTION: Get rich with us -->
+    <div class="get-rich">
+        <div class="members">
+
+            <!-- member 1 -->
+            <div class="member">
+                <div class="member__info">
+                    <div class="member__name-earned">
+                        <div class="member__name">Matt Anderson</div>
+                        <div class="member__earned">$1,654</div>
+                    </div>
+                    <div class="member__city-profit">
+                        <div class="member__city">London</div>
+                        <div class="member__profit">Profit</div>
+                    </div>
+                    <p class="member__txt">I finally know what it's like to live the dream. I no longer feel like I'm on
+                        the outside
+                        looking in while everyone else has all the fun. The Bitcoin Bank has allowed me to retire early
+                        and live the 1% lifestyle </p>
+                </div>
+            </div>
+
+            <!-- member 2 -->
+            <div class="member">
+                <div class="member__info">
+                    <div class="member__name-earned">
+                        <div class="member__name">Eve McDavid</div>
+                        <div class="member__earned">$997</div>
+                    </div>
+                    <div class="member__city-profit">
+                        <div class="member__city">Birmingham</div>
+                        <div class="member__profit">Profit</div>
+                    </div>
+                    <p class="member__txt">I finally know what it's like to live the dream. I no longer feel like I'm on
+                        the outside
+                        looking in while everyone else has all the fun. The Bitcoin Bank has allowed me to retire early
+                        and live the 1% lifestyle </p>
+                </div>
+            </div>
+
+            <!-- member 3 -->
+            <div class="member">
+                <div class="member__info">
+                    <div class="member__name-earned">
+                        <div class="member__name">Lucy Jackson</div>
+                        <div class="member__earned">$1,075</div>
+                    </div>
+                    <div class="member__city-profit">
+                        <div class="member__city">Cambridge</div>
+                        <div class="member__profit">Profit</div>
+                    </div>
+                    <p class="member__txt">I finally know what it's like to live the dream. I no longer feel like I'm on
+                        the outside
+                        looking in while everyone else has all the fun. The Bitcoin Bank has allowed me to retire early
+                        and live the 1% lifestyle </p>
+                </div>
+            </div>
+
+            <!-- member 4 -->
+            <div class="member">
+                <div class="member__info">
+                    <div class="member__name-earned">
+                        <div class="member__name">Matt Anderson</div>
+                        <div class="member__earned">$1,239</div>
+                    </div>
+                    <div class="member__city-profit">
+                        <div class="member__city">London</div>
+                        <div class="member__profit">Profit</div>
+                    </div>
+                    <p class="member__txt">I finally know what it's like to live the dream. I no longer feel like I'm on
+                        the outside
+                        looking in while everyone else has all the fun. The Bitcoin Bank has allowed me to retire early
+                        and live the 1% lifestyle </p>
+                </div>
+            </div>
+
+            <img src="./assets/users/user1-aside.jpg" alt="user-image" class="member-aside-img">
+            <img src="./assets/users/user2-aside.jpg" alt="user-image" class="member-aside-img">
+        </div>
+        <div class="get-rich__content section">
+            <h3 class="section-title txt-dark">Get rich with us,<br>
+                simple as that!</h3>
+            <p class="get-rich__txt section-txt">The BitProfit is a group reserved exclusively to people who jumped on
+                the insane
+                returns that Bitcoin offers and have quietly amassed a fortune in doing so. Our members enjoy retreats
+                around the world every month while they make money on their laptop with just a few minutes of “work”
+                every day.</p>
+            <button class="btn btn_blue position-to-form">Join us satisfied users</button>
+        </div>
+        <img src="./assets/users/user2-aside.jpg" alt="user-image" class="member-aside-img-2">
+    </div>
+    <!-- SECTION: Get rich with us - END -->
+
+
+    <!-- SECTION: Reasons -->
+    <div class="section reasons">
+        <section>
+            <article class="reasons__item">
+                <img class="reasons__img" src="./assets/ico1.svg" alt="icon">
+                <h4 class="section-subtitle">Laser-accurate performance</h4>
+                <p class="reasons__txt">There is no other trading app in the world that performs at the 99.4% level of
+                    accuracy that The BitProfit is able to hit. That's why our members from around the world trust us to
+                    double triple and quadruple their hard-earned money.</p>
+            </article>
+            <article class="reasons__item">
+                <img class="reasons__img" src="./assets/ico2.svg" alt="icon">
+                <h4 class="section-subtitle">Superior technology</h4>
+                <p class="reasons__txt">The BitProfit software has been created using the most advanced programming the
+                    trading world has ever seen. The software is ahead of the markets by 0.01 seconds. This 'time leap'
+                    makes the software the most consistent trading app on the planet.</p>
+            </article>
+            <article class="reasons__item">
+                <img class="reasons__img" src="./assets/ico3.svg" alt="icon">
+                <h4 class="section-subtitle">Award-winning trading app</h4>
+                <p class="reasons__txt">The BitProfit app has won a number of awards. The most recent awards we have had
+                    the honor of receiving is getting #1 in the trading software category for the US Trading
+                    Association.</p>
+            </article>
+        </section>
+        <button class="reasons__btn btn btn_blue position-to-form">Let’s start earning money</button>
+    </div>
+    <!-- SECTION: Reasons - END-->
+
+
+    <!-- SECTION: FAQ - Frequently Asked Questions -->
+    <div class="faq section">
+        <h3 class="section-title txt-dark">You ask, we answer</h3>
+        <dl class="faq-list">
+            <span class="mark-point"></span>
+            <dt class="section-subtitle">What kind of result can I expect?</dt>
+            <dd class="section-txt">Bitcoin Bank members typically profit a minimum of daily</dd>
+            <span class="mark-point"></span>
+            <dt class="section-subtitle">How many hours per day do I need to work?</dt>
+            <dd class="section-txt">Our members work an average of 20 minutes a day or less. Because the software
+                handles the trading the amount of 'work' required is minimal.</dd>
+            <span class="mark-point"></span>
+            <dt class="section-subtitle">What is the maximum amount that I can make?</dt>
+            <dd class="section-txt">Your profits are unlimited within The Bitcoin Bank. Some members earned their first
+                million within just 61 days.</dd>
+            <div class="faq-list__spacer"></div>
+            <span class="mark-point"></span>
+            <dt class="section-subtitle">How much does the software cost?</dt>
+            <dd class="section-txt">Members of The Bitcoin Bank get a copy of our proprietary software free of charge.
+                To become a member, simply fill out the form on this page.</dd>
+            <span class="mark-point"></span>
+            <dt class="section-subtitle">Is this like MLM or Affiliate Marketing?</dt>
+            <dd class="section-txt">This is not like MLM, affiliate marketing or anything else out there. The software
+                wins trades with 99.4% accuaracy.</dd>
+            <span class="mark-point"></span>
+            <dt class="section-subtitle">Are there any fees?</dt>
+            <dd class="section-txt">There are no hidden fees. No broker fees or commissions. All of your money is 100%
+                yours and you are free to withdraw it at any time you choose without delay.</dd>
+            <!-- CTA - Call to action -box  -->
+            <div class="cta-box cta-box_faq">
+                <div>
+                    <span class="mark-point"></span>
+                    <h4 class="section-subtitle txt-white">Still not on board?</h4>
+                    <p class="section-txt">It’s really that simple, just sign up.</p>
+                </div>
+                <button class="btn btn_green position-to-form">Join us right now!</button>
+            </div>
+        </dl>
+    </div>
+    <!-- SECTION: FAQ - Frequently Asked Questions - END -->
+
+
+    <!-- SECTION: Footer -->
+    <div class="bg-footer section-bg">
+        <div class="footer section">
+            <h3 class="section-title">Let's get started</h3>
+
+            <!-- ************************** -->
+            <!-- ******* F O R M S ******** -->
+            <!-- ************************** -->
+            <!-- IMPORTANT: Change class to 'form-choice4' for different layout -->
+            <div class="form-choice form-choice4">
+                <!-- FORM 1  - One step -->
+                <div class="form-box footer-form1">
+                    <form action="" class="form" autocomplete="off">
+
+                        <!-- add class 'input-filled' for checked if an input is filled out -->
+                        <!-- First and Last name -->
+                        <div class="f-l-name">
+                            <div class="f-name">
+                                <label for="f-name3">First name</label><input placeholder="e.g. Eve" type="text"
+                                    id="f-name3" class="form__input form__input31" required>
+                            </div>
+                            <div class="l-name">
+                                <label for="l-name3">Last name</label><input type="text" placeholder="e.g. McAllis"
+                                    id="l-name3" class="form__input form__input31" required>
+                            </div>
+                        </div>
+                        <!-- First and Last name - END -->
+                        <label for="e-mail3">Email</label><input type="email" id="e-mail3"
+                            class="form__input form__input31" placeholder="e.g. evemcallis@gmail.com " required>
+
+                        <button type="button" class="btn btn_blue">Join us right now!</button>
+                    </form>
+                </div>
+
+
+                <!-- FORM 2 - Two steps -->
+                <!-- step 1 -->
+                <div class="form-box footer-form2">
+                    <div class="form-box__step1">
+                        <div class="step-indicator txt-blue">STEP <span>1</span> / <span class="transparent-05">2</span>
+                        </div>
+                        <h3 class="form-box__title">Start your journey<br> with us</h3>
+                        <form action="" class="form form_step1">
+                            <!-- ad class 'input-filled' for checked if an input is filled out -->
+                            <label for="f-name4">First name</label><input value="Peter" type="text" id="f-name4"
+                                class="form__input form__input41 input-filled" required>
+                            <label for="l-name4">Last name</label><input type="text" id="l-name4"
+                                class="form__input form__input41" required>
+                            <label for="e-mail4">Email</label><input type="email" id="e-mail4"
+                                class="form__input form__input41" placeholder="e.g. evemcallis@gmail.com " required>
+
+                            <button type="button" class="btn btn_blue btn-footer-next">Join us right now!</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- step 2 -->
+                <div class="form-box form-box_2-2 footer-form2 form-switch">
+                    <div class="form-box__step2">
+                        <div class="step-indicator txt-blue">STEP <span>2</span> / <span class="transparent-05">2</span>
+                        </div>
+                        <h3 class="form-box__title">One more step!</h3>
+                        <form action="" class="form form_step2" autocomplete="off">
+                            <!-- ad class 'input-filled' for checked if an input is filled out -->
+                            <label for="phone-num4">Phone</label><input type="tel" id="phone-num4" class="form__input"
+                                required>
+                            <button type="button" class="btn btn_blue btn-finish">Join us right now!</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <a href="" class="footer__logo"><img src="./assets/logo.svg" alt="logo-image"></a>
+                <div class="footer__links">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms of use</a>
+                </div>
+                <div class="footer__copy">© COPYRIGHT - BitProfit 2020</div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION: Footer - END -->
+
+
+    <!-- BUTTON - Calculate your potential profit - BUTTON -->
+    <button class="btn btn_blue btn_profit-calc">
+        <span class="payout-box">
+            <span class="payout-box__title  desktop-only">Calculate your<br>potential profit</span>
+            <span class="payout-box__icon"><img src="./assets/payout-icon.svg" alt=""></span>
+        </span>
+    </button>
+    <!-- BUTTON - Calculate your potential profit - BUTTON - END -->
+
+
+    <!-- MODAL - Calculate your potential profit - MODAL -->
+    <div class="modal_profit-calc modal">
+        <div class="profit-calc modal-box">
+            <h1 class="profit-calc__title">Potential profits calculator</h1>
+            <p class="profit-calc__txt">Use our calculator to get your potential earnings from BitProfit.</p>
+            <div class="calc-box">
+                <div class="calc-payout">
+                    <span class="logo-circle"></span>
+                    <div class="payout-box">
+                        <div class="payout-box__title">Potential payout</div>
+                        <div class="payout-box__icon"><img src="./assets/payout-icon.svg" alt=""></div>
+                    </div>
+                    <div class="payout-box__amount">$3,365</div>
+                    <button class="btn btn_green">Join us right now!</button>
+                </div>
+
+                <div class="calc-range">
+                    <!-- Deposit -->
+                    <div class="calc-range__deposit">
+                        <div class="flexr-btw">
+                            <form onsubmit="inputDeposit();return false">
+                                <label for="currency" class="calc-range__title">Deposit</label>
+                                <span class="calc-range-input">
+                                    <span class="currency">$</span>
+                                    <input id="currency" name="currency" type="number" value="1250" min="0" max="5000"
+                                        class="calc-range-input__deposit">
+                                </span>
+                            </form>
+                        </div>
+                        <div class="height-helper">
+                            <input onchange="sliderDeposit(this)" type="range" min="0" max="5000" value="1250" step="50"
+                                class="custom-range-slider calc-range__deposit__slider">
+                            <span class="current-value-box"><span class="current-value-box__num"></span></span>
+                            <span class="slider-values slider-min">$0</span>
+                            <span class="slider-values slider-max">$5,000</span>
+                        </div>
+                    </div>
+                    <!-- Time of usage -->
+                    <div class="calc-range__time">
+                        <div class="flexr-btw">
+                            <form onsubmit="inputDays();return false">
+                                <label for="time-unit-days" class="calc-range__title">Time of usage</label>
+                                <span class="calc-range-input">
+                                    <input id="time-unit-days" name="time-unit-days" type="number" value="90" min="0"
+                                        max="180" class="calc-range-input__time">
+                                    <span class="time-unit">days</span>
+                                </span>
+                            </form>
+                        </div>
+                        <div class="height-helper">
+                            <input onchange="sliderDays(this)" type="range" min="0" max="180" value="90" step="1"
+                                class="custom-range-slider calc-range__time__slider">
+                            <span class="current-value-box"><span class="current-value-box__num"></span></span>
+                            <span class="slider-values slider-min">0 days</span>
+                            <span class="slider-values slider-max">180 days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span role="button" type="button" class="close-modal_profit-calc">×</span>
+        </div>
+    </div>
+    <!-- MODAL - Calculate your potential profit - MODAL - END -->
+
+    <!-- MODAL - Stop, Don't go! - MODAL -->
+    <div class="stop-modal modal">
+        <div class="stop section-bg modal-box">
+            <div class="stop__content">
+                <h2 class="stop__title main-title">Stop, don't go!</h2>
+                <p class="stop__subtitle"> Register and activate your account now and <a href="#" class="txt-yellow">get
+                        a free educational package.</a></p>
+                <p class="stop__txt">Join thousands of people who are using this opportunity.</p>
+            </div>
+            <!-- STOP modal-form -->
+            <div class="stop__form">
+                <!-- FORM 1  - One step -->
+                <div class="form-box form-box_1 modal-form">
+                    <form action="" class="form" autocomplete="off">
+
+                        <!-- ATENTION:  add class 'input-filled' for checked if an input is filled out -->
+
+                        <!-- First and Last name -->
+                        <div class="f-l-name">
+                            <div class="f-name">
+                                <label for="f-name5">First name</label><input placeholder="e.g. Peter" type="text"
+                                    id="f-name5" class="form__input" required>
+                            </div>
+                            <div class="l-name">
+                                <label for="l-name5">Last name</label><input type="text" id="l-name5"
+                                    class="form__input" required>
+                            </div>
+                        </div>
+                        <!-- First and Last name - END -->
+
+                        <!-- E-mail -->
+                        <label for="e-mail5">Email</label><input type="email" id="e-mail5" class="form__input"
+                            placeholder="e.g. evemcallis@gmail.com " required>
+                        <!-- E-mail - END -->
+
+                        <!-- Password -->
+                        <label for="password">Password</label><input type="password" id="password" class="form__input"
+                            required>
+                        <!-- Password - END -->
+
+                        <!-- Phone number SELECT(EXAMPLE ONLY)-->
+                        <div class="phone-box">
+                            <select name="phone-code" class="phone-code">
+                            </select>
+
+                            <label for="phone-num5">Phone</label><input type="number" id="phone-num5"
+                                class="form__input" placeholder="XX-XX-XXX-XXX" required>
+                        </div>
+                        <!-- Phone number - END -->
+                        <button type="button" class="btn btn_blue" id="formJoinModal">Join us right now!</button>
+                    </form>
+                </div>
+
+                <span role="button" class="stop__close">No, thanks</span>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL - Stop, Don't go! - MODAL - END -->
+
+    <!-- MODAL - Congratulations - MODAL -->
+    <div class="congrat-modal modal">
+        <div class="congrat section-bg modal-box">
+            <h4 class="congrat__title">Congratulations!</h4>
+            <h5 class="congrat__subtitle">Recommended broker</h5>
+
+            <div class="rating">
+                <img src="./assets/logo.svg" alt="bit-profit-logo">
+                <div class="rating-content">
+                    <span>4.8 / 5</span>
+                    <span class="rating__stars"></span>
+                </div>
+            </div>
+            <div class="txt-block">
+                <div class="txt-block-flex">
+                    <h5 class="txt-block__title">Your safety is our priority</h5>
+                    <picture>
+                        <source media="(min-width:1024px)" srcset="../assets/congrat-safety-lg.png">
+                        <source media="(min-width:320px)" srcset="../assets/congrat-safety.png">
+                        <img src="../assets/congrat-safety.png" alt="safety-icon">
+                    </picture>
+                    <!-- <img src="../assets/congrat-safety.png" alt="safety-icon"> -->
+                </div>
+                <p>As deterrmined by its refulatory status BitProfit takes strict measures to safeguard client’s funds
+                    and their privacy.</p>
+            </div>
+            <div class="txt-block">
+                <div class="txt-block-flex">
+                    <h5 class="txt-block__title">Highest payout options</h5>
+                    <picture>
+                        <source media="(min-width:1024px)" srcset="../assets/congrat-payout-lg.png">
+                        <source media="(min-width:320px)" srcset="../assets/congrat-payout.png">
+                        <img src="../assets/congrat-payout.png" alt="payout-icon">
+                    </picture>
+                </div>
+                <p>BitProfit offers up to 88% return per sucessful trade!</p>
+            </div>
+            <button class="btn btn_green">Jоin us right now!</button>
+        </div>
+    </div>
+    <!-- MODAL - Congratulations - MODAL - END -->
+
+
+
+</body>
+
+<script src="./main.js"></script>
+<script src="./range-slider.js"></script>
+<script src="./custom-map.js"></script>
+
+</html>

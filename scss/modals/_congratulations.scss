@@ -1,0 +1,141 @@
+.congrat-modal {
+    // display: block !important;
+}
+
+.congrat {
+    max-width: 620px;
+    background:   radial-gradient(99.74% 194.21% at 77.47% 107.01%, #6000AB 0%, #11AEC4 100%);
+    &__title {
+        font-family: poppins-regular;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 1.14;
+        text-align: center;
+        margin-bottom: 10px;
+        color: $white;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-family: poppins-medium;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.43;
+        color: $yellow;
+        margin-bottom: 20px;
+    }
+
+    & * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+.rating {
+    background: #517CC5;
+    backdrop-filter: blur(100px);
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 40px;
+    color: $white;
+    box-shadow: 30px 30px 150px rgba(0, 0, 0, 0.2);
+
+
+    img {
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+
+    }
+
+    &__stars {
+        display: block;
+        width: 120px;
+        height: 24px;
+        background-image: url(../assets/mdi_star.svg);
+        background-size: contain;
+        background-repeat: repeat-x;
+        margin: 0 auto;
+        float: right;
+        position: relative;
+        top: -2px;
+    }
+
+    &-content {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+.txt-block {
+    margin-bottom: 30px;
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    picture {
+        position: relative;
+        top: -4px;
+    }
+
+    &__title {
+        font-family: poppins-medium;
+        font-weight: 500;
+        font-size: 16px;
+        color: $white;
+        line-height: 1.25;
+    }
+
+    p {
+        font-size: 16px;
+        color: $white;
+        line-height: 1.5;
+        opacity: .8;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .congrat {
+        &__title {
+            margin-bottom: 20px;
+            color: $white;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+    }
+
+    .rating {
+        padding: 20px 100px;
+        margin-bottom: 50px;
+
+        img {
+            width: 294px;
+        }
+    }
+
+    .txt-block {
+        margin-bottom: 40px;
+
+        picture {
+            top: -24px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 60px;
+        }
+
+        p {
+            max-width: 400px;
+        }
+    }
+}

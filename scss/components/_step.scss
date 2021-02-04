@@ -1,0 +1,231 @@
+.step {
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    box-shadow: rgba(18, 17, 66, 0.1) 0px 15px 30px;
+    padding: 30px 20px 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: $dark;
+    max-height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .section-subtitle,
+    span,
+    .section-txt {
+        position: relative;
+        z-index: 5;
+        transition: all .3s;
+    }
+
+    .section-txt {
+        margin-bottom: 0;
+    }
+
+    &:before {
+        @extend %absolute-el;
+        height: 10px;
+        z-index: 0;
+        border-radius: 10px 10px 0px 0px;
+        transition: height .2s ease-out;
+    }
+
+    img {
+        position: relative;
+        float: right;
+        margin-bottom: 10px;
+        background-image: url(../assets/white-bg-circle.svg);
+        overflow: hidden;
+        background-size: 47px;
+        background-repeat: no-repeat;
+        background-position: left 1px top;
+        z-index: 5;
+    }
+
+    span {
+        line-height: 48px;
+        display: inline-block;
+        font-family: poppins-medium;
+        font-size: 14px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+    }
+
+    &_1 {
+        color: $orange;
+
+        span {
+            color: $orange;
+        }
+
+        &:before {
+            background: $orange;
+        }
+
+    }
+
+    &_2 {
+        span {
+            color: $grass-green;
+        }
+
+        &:before {
+            background: $grass-green;
+        }
+    }
+
+    &_3 {
+        span {
+            color: $blue;
+        }
+
+        &:before {
+            background: $blue;
+        }
+    }
+
+    &_cta {
+        background-color: $blue;
+        color: $white;
+    }
+
+    button.btn {
+        background-color: rgba(255,255,255,.5);
+        position: absolute;
+        z-index: 2;
+        width: auto;
+        transform: scale(0);
+        margin-bottom: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 0;
+        transform-origin: center bottom;
+        transition: opacity .1s, transform 0s;
+        &:hover{
+            background-color: rgba(255,255,255,.55);
+        }
+    }
+
+    &:hover {
+
+        cursor: pointer;
+
+        .section-subtitle,
+        span,
+        .section-txt {
+            position: relative;
+            z-index: 5;
+        }
+
+        span,
+        .section-txt,
+        .section-subtitle,
+        img {
+            color: $white;
+            position: relative;
+            z-index: 5;
+        }
+
+        &:before {
+            border-radius: 10px;
+            height: 100%;
+            transition: height .2s ease-in;
+            z-index: 0;
+        }
+
+        button.btn {
+            position: relative;
+            transform: scale(1);
+            opacity: 1;
+            margin-top: 16px;
+            justify-self: flex-end;
+            transform-origin: center bottom;
+            transition: opacity .5s, transform .2s;
+        }
+    }
+    &__num{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .steps {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .step {
+        flex: 1;
+
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            max-height: 500px;
+            margin-bottom: -56px;
+        }
+
+        &__num{
+            display: block;
+            position: absolute;
+            font-size: 100px;
+            line-height: 1;
+            color: #F9F7FD;
+            top: -70px;
+            right: 0;
+            z-index: -1;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .step {
+        padding: 30px;
+
+        img {
+            width: 65px;
+            background-size: 63px;
+
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 40px;
+        }
+
+        &:hover {
+            margin-bottom: -70px;
+
+            img { 
+                background-repeat: no-repeat;
+            }
+
+            button.btn {
+                margin-top: 30px;
+                max-width: 180px;
+            }
+        }
+        &__num{
+            font-size: 160px;
+            top: -110px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .step {
+        width: 400px;
+        padding: 30px 40px 40px;
+
+        &:not(:last-of-type) {
+            margin-right: 40px;
+        }
+
+    }
+}

@@ -1,0 +1,72 @@
+.faq {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.faq-list {
+    .mark-point {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $green;
+        margin-bottom: 20px;
+    }
+
+    dt {
+        margin-bottom: 10px;
+    }
+
+    dd {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .faq {
+        column-count: 2;
+        column-gap: 40px;
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        &-list__spacer {
+            display: block;
+            height: 170px;
+        }
+    }
+
+    .faq-list {
+        dd {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .faq {
+        column-gap: 80px;
+
+        &-list__spacer {
+            height: 200px;
+
+            .section-title {
+                margin-bottom: 80px;
+            }
+        }
+
+        .mark-point {
+            margin-bottom: 15px;
+        }
+    }
+
+    .faq-list {
+        dd {
+            margin-bottom: 60px;
+            padding-right: 40px;
+        }
+    }
+}

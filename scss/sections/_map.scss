@@ -1,0 +1,32 @@
+.map {
+    height: 540px; 
+    position: relative;
+    margin-top: -160px;
+    z-index: -1;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+    .map {
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .map {
+        margin-top: -80px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .map {
+        height: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

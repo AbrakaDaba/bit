@@ -1,0 +1,28 @@
+/* Remove Arrows/Spinners */
+/* Chrome, Safari, Edge, Opera */
+select,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input, select {
+  border: 0;
+  outline: 0;
+}

@@ -1,0 +1,171 @@
+.d-none{
+    display: none;
+}
+
+.background-wrapper {
+    overflow: hidden;
+}
+
+.height-helper {
+    min-height: 40px;
+    display: inline;
+    vertical-align: -moz-middle-with-baseline;
+}
+
+.section {
+    padding: 40px 16px;
+}
+
+.transparent-05 {
+    opacity: .5;
+}
+
+.mb-custom {
+    margin-bottom: 10px;
+}
+
+%bg-circle {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(100px);
+}
+
+
+
+%absolute-el {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.section-bg{
+    position: relative;
+    &:after{
+        @extend %absolute-el;
+        background-image: url(../assets/bg-mask.png);
+        background-size: cover;
+        background-position: center bottom;
+        z-index: -2;
+        opacity: .5;
+    }
+    &.intro{
+        background: radial-gradient(279.74% 194.21% at 77.47% 107.01%, #6000AB 0%, #11AEC4 100%);
+        background: radial-gradient(129.74% 164.21% at 77.47% 107.01%, #6000AB 0%, #11AEC4 100%);
+        z-index: 0;
+        &:after{
+            z-index: 0;
+        }
+    }
+    &.bg-footer{
+        z-index: -2;
+        background: radial-gradient(279.74% 194.21% at 77.47% 107.01%, #6000AB 0%, #11AEC4 100%); //! original code from design;
+        background: radial-gradient(129.74% 164.21% at 77.47% 107.01%, #6000AB 0%, #11AEC4 100%),url(../assets/modal-coins.png); //adapted to look like in design
+    }
+    &.stop{
+
+        background-repeat: no-repeat;
+        &:before{
+            @extend %absolute-el;
+            background-color: $dark;
+            z-index: -1;
+        }
+        &:after{
+            background-image: url(../assets/bg-mask.png);
+            background-image: url(../assets/modal-coins.png),url(../assets/bg-mask.png) ;
+            background-size: 0, cover;
+            background-position: 120px top, center center;
+            opacity: .35;
+            z-index: -1;
+        }
+    }
+    &.congrat{
+        position: relative;
+        &:before{
+            @extend %absolute-el;
+            background: radial-gradient(279.74% 194.21% at 77.47% 107.01%, #8C21E0 0%, #52BDCC 100%);
+            opacity: 0.5;
+            z-index: 0;
+        }
+        &:after{
+            @extend %absolute-el;
+            background-image: url(../assets/congrat-modal-coin.png), url(../assets/bg-mask.png);
+            background-size: auto, cover;
+            background-position: left 60%, right 10% center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+    }
+}
+
+
+
+
+.mob-only {
+    display: none;
+}
+
+.tablet-plus {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .section {
+        padding: 80px 40px;
+    }
+
+    .tablet-plus {
+        display: block;
+    }
+
+    .mb-custom {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+.section-bg{
+    &.stop{
+        &:after{
+            background-size: auto, cover;
+        }
+    }
+}
+}
+
+
+@media screen and (min-width: 1280px) {
+    .section {
+        padding: 80px 70px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1360px) {
+    .section {
+        padding: 75px calc((100% - 1280px) / 2);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .mob-only {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .section {
+        padding: 100px calc((100% - 1280px) / 2);
+    }
+}

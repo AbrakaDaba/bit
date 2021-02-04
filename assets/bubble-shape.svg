@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="9" viewBox="0 0 36 9" fill="none" style="">
+<rect width="36" height="9" fill=""/>
+<g clip-path="url(#clip0)">
+
+
+<g filter="url(#filter0_d)" style="&#10;    width: 36px;&#10;">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M108 -39C108 -44.5228 103.523 -49 98 -49H-62C-67.5228 -49 -72 -44.5228 -72 -39V-9C-72 -3.47715 -67.5228 1 -62 1H1.85786C4.51003 1 7.05357 2.05357 8.92893 3.92893L10.9289 5.92893C14.8342 9.83417 21.1658 9.83417 25.0711 5.92893L27.0711 3.92893C28.9464 2.05357 31.49 1 34.1421 1H98C103.523 1 108 -3.47715 108 -9V-39Z" fill="white" max-width="36" style="&#10;    width: 36px;&#10;"/>
+
+</g>
+</g>
+<defs>
+
+<filter id="filter0_d" x="0" y="0" width="36" height="9" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+
+
+
+
+
+
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+
+<clipPath id="clip0">
+<rect width="36" height="9" fill="white" transform=" "/>
+</clipPath>
+
+</defs>
+</svg>

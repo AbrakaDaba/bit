@@ -1,0 +1,86 @@
+.get-rich {
+    padding-top: 80px;
+    background-image: url(../assets/bg-ellipse.svg);
+    background-position: -160px -180px;
+    background-size: 800px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .section-title {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .get-rich { 
+        padding-top: 100px;
+
+        &__content {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 970px) {
+
+    .get-rich {
+        background-position: calc(50vw - 250px) -10px;
+        background-size: 1000px;
+        position: relative;
+        padding: 0 calc((100% - 970px) / 2);
+        padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .get-rich {
+        padding: 0;
+        padding-bottom: 80px;
+        display: flex;
+
+        &>* {
+            flex: 1;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+        }
+
+        &__content {
+            padding-left: 0;
+            padding-right: 80px;
+            padding-top: 300px;
+        }
+
+        &__txt {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    .get-rich {
+        background-size: 1600px;
+        background-position: -220px -420px;
+
+        &__content {
+            position: relative;
+            left: -30px;
+            padding-right: calc((100% - 1320px) / 2);
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    .get-rich {
+        background-position-x: center;
+    }
+}

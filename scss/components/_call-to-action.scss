@@ -1,0 +1,115 @@
+.cta-box {
+    position: relative;
+    background-color: $blue;
+    box-shadow: rgba(18, 17, 66, 0.1) 0px 15px 30px;
+    padding: 30px 20px 20px;
+    margin: 40px 0;
+    border-radius: 10px;
+
+    p {
+        color: $white;
+    }
+
+    .section-subtitle {
+        display: inline-block;
+    }
+
+    & span {
+        display: inline-block;
+
+        span {
+            display: list-item;
+            list-style: disc;
+            margin-left: 30px;
+        }
+    }
+
+    &_dislocated {
+        margin: -90px 16px 100px 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cta-box {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+ 
+
+        .btn {
+            white-space: nowrap;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &_dislocated {
+            margin-top: -70px;
+            width: calc(100% - 80px);
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .cta-box {
+        padding: 20px 30px;
+
+        .cta-box_faq {
+            width: calc(100% + 20px);
+            transform: translate(-20px);
+        }
+
+        // .btn{
+        //     max-width: 192px;
+        //     padding: 0 20px;
+        // }
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .cta-box {
+        padding: 20px 40px;
+
+        // .btn {
+        //     max-width: 190px;
+        // }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &_dislocated {
+            margin-top: -130px;
+            margin-bottom: 160px;
+        }
+
+        &_faq {
+            padding: 30px 40px;
+        }
+    }
+
+    .cta-box.cta-box_faq {
+        width: calc(100% + 40px);
+        transform: translate(-40px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .cta-box {
+        &_dislocated {
+            margin-top: 10px;
+            margin-bottom: 160px;
+        }
+    }
+}
+@media screen and (min-width: 1360px) {
+
+    .cta-box {
+        width: 1280px;
+    }
+}
